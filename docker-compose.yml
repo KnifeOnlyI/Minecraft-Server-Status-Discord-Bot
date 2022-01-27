@@ -1,0 +1,8 @@
+version: '2'
+services:
+  minecraft-server-status-discord-bot:
+    environment:
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+      - MINECRAFT_SERVER_IP=${MINECRAFT_SERVER_IP}
+      - MINECRAFT_SERVER_PORT=${MINECRAFT_SERVER_PORT}
+    build: .
