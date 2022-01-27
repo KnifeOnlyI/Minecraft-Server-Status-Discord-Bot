@@ -4,11 +4,11 @@ from services import env
 from mcstatus import MinecraftServer
 
 client = discord.Client()
+
 discord_token = env.get_string("DISCORD_TOKEN")
 minecraft_server_ip = env.get_string('MINECRAFT_SERVER_IP')
-minecraft_server_port = env.get_string('MINECRAFT_SERVER_PORT')
-mc_server = MinecraftServer(minecraft_server_ip, int(minecraft_server_port))
-
+minecraft_server_port = env.get_int('MINECRAFT_SERVER_PORT')
+mc_server = MinecraftServer(minecraft_server_ip, minecraft_server_port)
 
 def main() -> None:
     client.run(discord_token)

@@ -24,10 +24,10 @@ python src/main.py
 
 ### Commands
 
-Build/Rebuild app
+Build/Rebuild app (with --no-cache to reload env variables)
 
 ```bash
-docker-compose build
+docker-compose build [--no-cache]
 ```
 
 Start app
